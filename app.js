@@ -20,6 +20,9 @@ import { Server } from "socket.io";
 import { createServer } from "node:http"
 
 
+import { MensajesControler } from "./controladores/mensajes.js";
+import { UsuariosControler } from "./controladores/usuarios.js";
+
 const port = process.env.PORT ?? 1234
 const app = express()
 
@@ -53,6 +56,12 @@ const io = new Server(server, {
 
 // podemos recuperar el socket en el callback
 // y de ahi recuperar ciertos eventos
+
+
+UsuariosControler.RecibirUsuarios(io)
+MensajesControler.RecibirMensajes(io)
+
+/*
 io.on("connection", (socket) => {
     // a partir de aqui, podemos manejar los enventos del socket
     console.log("usuario conectado")
@@ -78,6 +87,9 @@ io.on("connection", (socket) => {
         io.emit('chat message', mensajes)
     })
 })
+*/
+
+
 
 // el logger debe ser llamado antes de las request, por lo que lo usamos
 // como middleware
