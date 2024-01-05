@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  background-color: rgb(129, 129, 255);
+}
+
+.sendBox {
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  align-self: flex-end;
+  background-color: rgb(16, 16, 61);
+}
+
+.botonSend {
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  width: 50px;
+}
+
+.searchBox {
+  height: 50px;
+  width: 400px;
+}
+
+.CajaMensajes {
+  width: 100%;
+  height: 100%;
+  overflow-y:auto;
+  background-color: rgb(135, 135, 141);
+}
+
+.mensg {
+  background-color: rgb(255, 255, 255);
+  width: 70%;
+  height: auto;
+  margin-left: 20px;
+  border-radius: 20px;
+}

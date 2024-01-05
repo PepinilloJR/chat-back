@@ -1,0 +1,18 @@
+{
+  "name": "clase5-websockets-y-mas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "back": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.3"
+  }
+}
