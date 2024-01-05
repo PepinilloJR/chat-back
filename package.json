@@ -1,10 +1,11 @@
 {
-  "name": "clase5-websockets-y-mas",
+  "name": "chat-back",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
+    "start": "node app.js",
     "back": "node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
