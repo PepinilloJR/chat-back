@@ -41,7 +41,7 @@ const server = createServer(app) // creamos servidor http usando el app creado d
 // para mas info de esto consultar en https://socket.io/docs/v4/handling-cors/
 const io = new Server(server, {
     cors: {
-        origin: "https://pepinillojr.github.io/front-chat-prueba/"
+        origin: "https://pepinillojr.github.io"
     }
 })
 

@@ -4,7 +4,8 @@ export const CorsConf2 = (req,res) => {
     const ACCEPTED_ORIGINS = [
         'http://localhost:5174',
         'http://localhost:5173',
-        'http://localhost:3000'
+        'http://localhost:3000',
+		'https://pepinillojr.github.io'
     ]
     // accedo al origen
     const origen = req.header('origin')
