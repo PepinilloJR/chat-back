@@ -5,7 +5,8 @@ export const CorsConf2 = (req,res) => {
         'http://localhost:5174',
         'http://localhost:5173',
         'http://localhost:3000',
-		'https://pepinillojr.github.io'
+		'https://pepinillojr.github.io',
+        'http://localhost:3000/front-chat-prueba#/chat'
     ]
     // accedo al origen
     const origen = req.header('origin')

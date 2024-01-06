@@ -26,7 +26,7 @@ const server = createServer(app)
 const io = new Server(server, {
     cors: {
         //origin: "https://pepinillojr.github.io"
-        origin: 'http://localhost:3000'
+        origins: ['http://localhost:3000', "https://pepinillojr.github.io"]
     }
 })
 
