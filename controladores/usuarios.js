@@ -8,14 +8,14 @@ export class UsuariosControler {
 
             socket.on('nuevo usuario', (userTupla) => {
                 while (true) {
-                let nuevaId = userTupla[0].nombre + (Math.random() * (99999 - 10000) + 10000).toString()
+                let nuevaId = userTupla[0].name + (Math.random() * (99999 - 10000) + 10000).toString()
                 if (Usuarios.find(user => user.id === nuevaId) !== null) {
-                    const nuevo_usuario = {id: nuevaId, socketID: socket.id, nombre: userTupla[0].nombre, color: userTupla[0].Color}
-                    socket.emit(`nuser ${userTupla[1] + nuevo_usuario.nombre}`, nuevo_usuario)
+                    const nuevo_usuario = {id: nuevaId, socketID: socket.id, name: userTupla[0].name, color: userTupla[0].color}
+                    socket.emit(`nuser ${userTupla[1] + nuevo_usuario.name}`, nuevo_usuario)
                     Usuarios.push(nuevo_usuario)
                     break
                 } else {
-                    nuevaId = userTupla[0].nombre + (Math.random() * (99999 - 10000) + 10000).toString()
+                    nuevaId = userTupla[0].name + (Math.random() * (99999 - 10000) + 10000).toString()
                 }
                 }
                 io.emit('userslen', Usuarios.length)
