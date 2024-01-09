@@ -10,7 +10,7 @@ import { createServer } from "node:http"
 import { MensajesControler } from "./controladores/mensajes.js";
 import { UsuariosControler } from "./controladores/usuarios.js";
 
-const port = process.env.PORT ?? 1234
+const port = process.env.PORT ?? 3000
 const app = express()
 
 app.use((req, res, next) => {
@@ -26,7 +26,8 @@ const server = createServer(app)
 const io = new Server(server, {
     cors: {
         //origin: "https://pepinillojr.github.io"
-        origins: ['http://localhost:3000', "https://pepinillojr.github.io"]
+        origins: ['http://localhost:3000', "https://pepinillojr.github.io", "'http://localhost:3001'"],
+        transports: ['websocket']
     }
 })
 
@@ -70,6 +71,7 @@ app.get('/', (req, res) => {
     res.send('<h1>Esto es el servidor<h1>')
 })
 
-server.listen(port, () => {
+//'192.168.0.155'
+server.listen(port, '192.168.0.155', () => {
     console.log(`escuchando en http://localhost:${port}/`)
 })
