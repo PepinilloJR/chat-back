@@ -4,11 +4,12 @@ import express from "express";
 import { CorsConf2 } from "./middleware/CORS.js";
 import logger from 'morgan'
 import { Server } from "socket.io";
+//import { createServer } from "node:https"
 import { createServer } from "node:http"
-
 
 import { MensajesControler } from "./controladores/mensajes.js";
 import { UsuariosControler } from "./controladores/usuarios.js";
+import { readFileSync } from "node:fs";
 
 const port = process.env.PORT ?? 3000
 const app = express()
@@ -19,7 +20,9 @@ app.use((req, res, next) => {
 })
 
 
+//const server = createServer({cert: readFileSync('server.cer'), key: readFileSync('server.key')}, app) 
 const server = createServer(app) 
+
 // ademas, a partir de la version 4.0, se le debe pasar el origen 
 // donde vendran las peticiones, del siguiente modo
 // para mas info de esto consultar en https://socket.io/docs/v4/handling-cors/
@@ -73,5 +76,5 @@ app.get('/', (req, res) => {
 
 //'192.168.0.155'
 server.listen(port, '192.168.0.155', () => {
-    console.log(`escuchando en http://localhost:${port}/`)
+    console.log(`escuchando en https://localhost:${port}/`)
 })
