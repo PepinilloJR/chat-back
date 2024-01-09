@@ -10,7 +10,11 @@ import { createServer } from "node:http"
 import { MensajesControler } from "./controladores/mensajes.js";
 import { UsuariosControler } from "./controladores/usuarios.js";
 
+<<<<<<< HEAD
 const port = process.env.PORT ?? 3000
+=======
+const port = 3000// process.env.PORT // ?? 3000
+>>>>>>> 128b89d9fc7c0e8f79c09ac9ba6fa5297309572b
 const app = express()
 
 app.use((req, res, next) => {
