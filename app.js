@@ -74,6 +74,6 @@ app.get('/', (req, res) => {
     res.send('<h1>Esto es el servidor<h1>')
 })
 
-server.listen(port, '100.20.92.101', () => {
+server.listen(port, '127.0 0.1', () => {
     console.log(`escuchando en https://localhost:${port}/`)
 })
